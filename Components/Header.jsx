@@ -36,7 +36,7 @@ const Header = () => {
       <header>
         <nav class="navbar">
           <a href="#" class="logo">
-            Logo
+            Srinath10X
           </a>
           <ul class="nav-menu">
             <li class="nav-item">
