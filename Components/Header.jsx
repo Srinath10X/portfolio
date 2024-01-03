@@ -1,7 +1,36 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 import "./Header.css";
 
 const Header = () => {
+  useEffect(() => {
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+
+    const handleHamburgerClick = () => {
+      hamburger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    };
+
+    const handleNavLinkClick = () => {
+      hamburger.classList.remove("active");
+      navMenu.classList.remove("active");
+    };
+
+    hamburger.addEventListener("click", handleHamburgerClick);
+
+    document.querySelectorAll(".nav-link").forEach((n) => {
+      n.addEventListener("click", handleNavLinkClick);
+    });
+
+    // Cleanup: Remove event listeners when the component unmounts
+    return () => {
+      hamburger.removeEventListener("click", handleHamburgerClick);
+      document.querySelectorAll(".nav-link").forEach((n) => {
+        n.removeEventListener("click", handleNavLinkClick);
+      });
+    };
+  }, []);
   return (
     <>
       <header>
