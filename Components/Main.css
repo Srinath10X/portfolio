@@ -3,7 +3,7 @@
   flex-direction: row;
 }
 .left {
-  height: 88vh;
+  height: 80vh;
   width: 50%;
   padding: 3.8rem;
   background: black;
@@ -13,7 +13,7 @@
   flex-direction: column;
 }
 .right {
-  height: 88vh;
+  height: 80vh;
   width: 50%;
   background: black;
   display: flex;
@@ -74,18 +74,23 @@
 .x {
   font-size: 10rem;
   color: white;
+  background: linear-gradient(45deg, #eee, #333);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @media (max-width: 760px) {
   .main {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
   .left {
     width: 100%;
-    height: 65vh;
+    height: 60%;
     padding: 2rem;
+    display: block;
   }
   .right {
+    height: 25%;
     width: 100%;
   }
 }
