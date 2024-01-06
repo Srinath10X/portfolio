@@ -5,7 +5,7 @@
 
 .about h2 {
   color: white;
-  padding: 5% 5%;
+  padding: 5% 5% 2% 5%;
 }
 
 .ab-right {
@@ -22,9 +22,29 @@
   background: blue;
 }
 
+.line {
+  width: 90%;
+  color: white;
+  box-sizing: border-box;
+  margin: 0 5%;
+}
+
+.about-desc {
+  padding: 3% 5% 5% 5%;
+  color: white;
+}
+
+.img {
+  width: 80%;
+  height: 80%;
+  margin: 10%;
+  background: dodgerblue;
+}
+
 @media (max-width: 760px) {
   .about {
     flex-direction: column;
+    padding: 8% 5%;
   }
   .ab-right {
     height: 45vh;
