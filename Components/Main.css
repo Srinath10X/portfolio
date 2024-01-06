@@ -56,6 +56,10 @@
   color: black;
 }
 
+.btn:nth-child(1):hover {
+  cursor: pointer;
+}
+
 .btn:nth-child(2):hover {
   background: white;
   color: black;
