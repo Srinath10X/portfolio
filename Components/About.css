@@ -1,0 +1,38 @@
+.about {
+  display: flex;
+  padding: 5% 5%;
+}
+
+.about h2 {
+  color: white;
+  padding: 5% 5%;
+}
+
+.ab-right {
+  height: 80vh;
+  width: 50%;
+  display: inline-block;
+  background: red;
+}
+
+.ab-left {
+  height: 80vh;
+  width: 50%;
+  display: inline-block;
+  background: blue;
+}
+
+@media (max-width: 760px) {
+  .about {
+    flex-direction: column;
+  }
+  .ab-right {
+    height: 45vh;
+    width: 100%;
+  }
+
+  .ab-left {
+    height: 45vh;
+    width: 100%;
+  }
+}
