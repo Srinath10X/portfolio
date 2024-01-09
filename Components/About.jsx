@@ -5,7 +5,7 @@ import Image from "next/image";
 const About = () => {
   return (
     <>
-      <div className="about">
+      <div className="about" id="ab">
         <div className="ab-right">
           <div className="img">
             <Image src="/web.jpg" class="img-coding" height={300} width={300} />
