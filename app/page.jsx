@@ -10,8 +10,8 @@ const page = () => {
     <>
       <Header />
       <Main />
-      <About />
       <Work />
+      <About />
     </>
   );
 };
