@@ -52,3 +52,22 @@ button#submit {
 button#submit:hover {
   cursor: pointer;
 }
+
+.right-contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.right-contact img {
+  filter: invert(1);
+  transform: rotate(-15deg);
+}
+
+@media (max-width: 760px) {
+  .contactForm {
+    grid-template-columns: 1fr;
+  }
+  .right-contact {
+    display: none;
+  }
+}

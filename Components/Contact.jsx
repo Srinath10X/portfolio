@@ -1,5 +1,6 @@
 "use client";
 import "./Contact.css";
+import Image from "next/image";
 
 const Contact = () => {
   return (
@@ -14,7 +15,9 @@ const Contact = () => {
             Send
           </button>
         </form>
-        <div class="right"></div>
+        <div class="right-contact">
+          <Image src={"/mail.png"} height={300} width={300} />
+        </div>
       </div>
     </>
   );
