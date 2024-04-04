@@ -4,13 +4,13 @@
 }
 
 .about h2 {
-  color: white;
+  color: var(--secondary-color);
   font-size: 3rem;
   padding: 15% 5% 2% 5%;
 }
 
 .about p {
-  color: white;
+  color: var(--secondary-color);
   padding: 5% 5% 5% 5%;
 }
 
@@ -35,13 +35,13 @@
 
 .line {
   width: 90%;
-  color: white;
+  color: var(--secondary-color);
   box-sizing: border-box;
   margin: 0 5%;
 }
 
 .about-desc {
-  color: white;
+  color: var(--secondary-color);
 }
 
 .img {

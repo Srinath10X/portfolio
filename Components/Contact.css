@@ -1,6 +1,7 @@
 .contactForm {
   height: 100%;
   padding: 5%;
+  margin: 0 3%;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
@@ -23,6 +24,14 @@ textarea {
   resize: none;
 }
 
+input {
+  height: 3rem;
+}
+
+textarea {
+  height: 7rem;
+}
+
 input:focus,
 select:focus,
 textarea:focus,
@@ -31,12 +40,15 @@ button:focus {
 }
 
 button#submit {
-  height: 2rem;
-  width: 8rem;
-  background: white;
+  padding: 0.75rem 1rem;
+  background: var(--secondary-color);
   color: black;
-  border-radius: 1.4rem;
+  border-radius: 1.75rem;
   border: none;
   outline: none;
   font-weight: 500;
+}
+
+button#submit:hover {
+  cursor: pointer;
 }

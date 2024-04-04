@@ -4,9 +4,9 @@ import "./Contact.css";
 const Contact = () => {
   return (
     <>
-      <div class="contactForm">
+      <div class="contactForm" id="contact">
         <form action="https://formspree.io/f/xleqpqkb" method="POST">
-          <h1>Get In Touch</h1>
+          <h1 id="contact_title">Get In Touch</h1>
           <input type="text" name="name" placeholder="Name" />
           <input type="email" name="email" placeholder="Email" />
           <textarea name="message" placeholder="Message"></textarea>

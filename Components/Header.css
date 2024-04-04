@@ -15,7 +15,7 @@ li {
 }
 
 a {
-  color: white;
+  color: var(--secondary-color);
   text-decoration: none;
 }
 
@@ -58,7 +58,7 @@ a {
   margin: 5px auto;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  background: white;
+  background: var(--secondary-color);
   border-radius: 5px;
 }
 

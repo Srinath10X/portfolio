@@ -1,0 +1,12 @@
+{
+  "intro": "Hello,I'm",
+  "name": "Srinath",
+  "desc": "Born to Customize, Built to Optimize ",
+
+  "navLink": {
+    "link1": "Home",
+    "link2": "About",
+    "link3": "Work",
+    "link4": "Contact"
+  }
+}
