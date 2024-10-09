@@ -1,0 +1,99 @@
+--- 
+import Button from '../components/Button.astro'
+--- 
+<main>
+	<div class="right">
+		<p class="caption">Hi I’m <span class="srinath">Srinath10X</span><br/> A FullStack Developer</p>
+		<p class="desc">Crafting solutions with creativity and code.</p>
+		<Button title="Let's Connect" />
+	</div>
+	<div class="left">
+	</div>
+</main>
+<div class="bottom">
+	<div class="scroll-down">
+		<img src="Scroll Down.svg" alt="">
+	</div>
+	<div class="socials">
+		<img src="Socials.svg" alt="">
+	</div>
+</div>
+
+<style>
+main{
+	padding: 0 5%;
+}
+
+.right{
+	display: flex;
+	height: calc(100vh - var(--header-height) - var(--bottom-bar-height));
+	justify-content: center;
+	flex-direction: column;
+	width: 70%;
+}
+
+.caption {
+	font-size: 3rem;
+	font-weight: bold;
+}
+
+.bottom {
+	height: calc(var(--bottom-bar-height));
+}
+
+.srinath{
+	color: var(--c-bluebell);
+}
+
+.desc{
+	font-weight: 600;
+	font-size: 1.125rem;
+	margin: 1rem 0;
+}
+
+.bottom{
+	padding: 0 5%;
+	display: flex;
+	justify-content: space-between;
+	
+}
+
+img{
+	height: 3rem;
+}
+
+.socials {
+	img{
+		height: 1.75rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.right {
+		width: 100%;
+		p.caption{
+			font-size: 2.4rem;
+		}
+		p.desc{
+			font-size: 1rem;
+		}
+	}
+	.left {
+		display: none;
+	}
+	.bottom {
+		justify-content: end;
+	}
+
+	.socials{
+		img{
+			height: 1.5rem;
+		}
+	}
+
+	.scroll-down{
+		display: none;
+	}
+}
+
+</style>

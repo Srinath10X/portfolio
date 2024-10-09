@@ -1,0 +1,130 @@
+---
+
+---
+
+<header>
+	<nav class="navbar">
+		<h1 class="logo">Srinath10X</h1>
+		<ul class="nav-menu">
+			<li class="nav-item">
+				<a href="#" class="nav-link">Home</a>
+			</li>
+			<li class="nav-item">
+				<a href="#about" class="nav-link">About</a>
+			</li>
+			<li class="nav-item">
+				<a href="#" class="nav-link">Work</a>
+			</li>
+			<li class="nav-item">
+				<a href="#contact" class="nav-link">Contact</a>
+			</li>
+		</ul>
+		<div class="hamburger">
+			<span class="bar"></span>
+			<span class="bar"></span>
+			<span class="bar"></span>
+		</div>
+	</nav>
+</header>
+
+<style>
+header {
+  background: var(--c-black);
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+
+a {
+	font-weight: 600;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.navbar {
+  height: var(--header-height);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background: var(--c-white);
+  border-radius: 5px;
+}
+
+.nav-item {
+  padding: 0 1.5rem;
+}
+
+@media (max-width: 760px) {
+  .bar {
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: rotate(45deg) translateY(11.5px);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translateY(-11.5px);
+  }
+
+  .nav-menu {
+    position: fixed;
+    right: -100%;
+    top: var(--header-height);
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background: black;
+    transition: 0.3s;
+  }
+
+  .nav-item {
+    padding: 1.5rem 0;
+  }
+
+  .nav-menu.active {
+    right: 0;
+  }
+}
+</style>
+<script>
+const hamburger = document.querySelector(".hamburger")
+const nav_menu = document.querySelector(".nav-menu")
+
+hamburger.addEventListener("click",()=>{
+  hamburger.classList.toggle("active");
+  nav_menu.classList.toggle("active");
+})
+
+document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+  hamburger.classList.remove("active");
+  nav_menu.classList.remove("active");
+}))
+</script>
