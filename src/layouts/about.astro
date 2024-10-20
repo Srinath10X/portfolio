@@ -1,9 +1,9 @@
 ---
 import Button from '../components/Button.astro'
 ---
-<section>
+<section id="about">
 	<div class="top">
-		<h2 id="about">About Me</h2>
+		<h2>About Me</h2>
 	</div>
 	<div class="bottom">
 		<div class="image-wrapper">
@@ -20,10 +20,13 @@ import Button from '../components/Button.astro'
 section {
 	padding: 0 5%;
 	height: calc(100vh - var(--header-height));
+	/* height: 100vh; */
+	padding-bottom: 10%;
 }
 
 h2 {
 	margin-top: var(--header-height);
+	padding-top: 10%;
 	text-align: center;
 }
 
@@ -31,6 +34,7 @@ h2 {
 	height: calc(100% - var(--header-height));
 	display: flex;
 	padding: 0 8%;
+	padding-top: 5rem;
 }
 
 .image-wrapper {
