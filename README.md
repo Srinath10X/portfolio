@@ -1,12 +1,10 @@
 # Astro Portfolio 
 
-Welcome to my portfolio website! This project showcases my work, skills, and experiences.
+Welcome to my portfolio This website is build using astro 
 
 ## Table of Contents
 
 - [Introduction](#introduction)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
@@ -14,23 +12,7 @@ Welcome to my portfolio website! This project showcases my work, skills, and exp
 
 ## Introduction
 
-This portfolio website is built using [Astro](https://astro.build/), a modern static site generator. It is designed to be fast, efficient, and easy to navigate.
-
-## Features
-
-- Responsive design
-- Fast loading times
-- Easy navigation
-- Showcase of projects and skills
-- Contact form for inquiries
-
-## Technologies Used
-
-- [Astro.js](https://astro.build/)
-- HTML5
-- CSS3
-- JavaScript
-- (Include any other libraries or frameworks you used)
+This portfolio website is built using [Astro](https://astro.build/), a modern static site generator. 
 
 ## Installation
 
@@ -38,11 +20,11 @@ To run this project locally, follow these steps:
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/your-repo-name.git
+git clone https://github.com/Srinath10X/portfolio.git
 ```
 2. Navigate to the project directory:
 ```bash
-cd your-repo-name
+cd portfolio
 ```
 3. Install the dependencies:
 ```bash
