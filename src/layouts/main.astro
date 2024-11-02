@@ -24,6 +24,20 @@ main{
 	padding: 0 5%;
 }
 
+main::before {
+	content: '';
+	position: absolute;
+	width: 5%;
+	height: 100vh;
+	background-color: #5396ff89;
+	filter: blur(50px) drop-shadow(0 0 10px var(--c-bluebell));
+	transform: rotate(-60deg);
+	border-radius: 50%;
+	top: -25%;
+	left: 0;
+	z-index: -1;
+}
+
 .right{
 	display: flex;
 	height: calc(100vh - var(--header-height) - var(--bottom-bar-height));
