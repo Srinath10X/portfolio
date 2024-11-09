@@ -23,20 +23,19 @@ import Button from '../components/Button.astro'
 main{
 	padding: 0 5%;
 }
+/* main::before { */
+/* 	content: ""; */
+/* 	position: absolute; */
+/* 	z-index: 1; */
+/* 	height: 215vh; */
+/* 	width: 1.2%; */
+/* 	top: -100vh; */
+/* 	background-color: rgba(255, 255, 255, .8); */
+/* 	border-radius: 50%; */
+/* 	filter: blur(30px); */
+/* 	transform: rotate(-60deg); */
+/* } */
 
-main::before {
-	content: '';
-	position: absolute;
-	width: 5%;
-	height: 100vh;
-	background-color: #5396ff89;
-	filter: blur(50px) drop-shadow(0 0 10px var(--c-bluebell));
-	transform: rotate(-60deg);
-	border-radius: 50%;
-	top: -25%;
-	left: 0;
-	z-index: -1;
-}
 
 .right{
 	display: flex;
@@ -69,7 +68,22 @@ main::before {
 	padding: 0 5%;
 	display: flex;
 	justify-content: space-between;
-	
+
+}
+
+.left {
+	width: 30%;
+	height: 100%;
+  --grid-cell-foreground: hsl(0, 0%, 33%);
+	--grid-cell-size: 50px;  
+	background-image: linear-gradient(
+      var(--grid-cell-foreground) 1px,
+      transparent 0
+    ),
+    linear-gradient(90deg, var(--grid-cell-foreground) 1px, transparent 0);
+  background-size: var(--grid-cell-size) var(--grid-cell-size);
+  background-position: center;
+  box-shadow: 0 0 800px rgb(0, 0, 0) inset;
 }
 
 img{
