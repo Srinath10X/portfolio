@@ -1,12 +1,16 @@
 ---
 const year = new Date().getFullYear();
+
+import LinkedinSVG from '../assets/linkedin.svg'
+import GithubSVG from '../assets/github.svg'
 ---
-<hr class="border-t border-gray-600 opacity-70 my-4">
-<footer class="flex align-center justify-between py-5 mb-[4rem]">
-	<div>
+<footer class="flex align-center justify-between py-5 mb-[2rem]">
+	<div class="h-full w-1/4 py-4 flex flex-row">
+		<a href="https://github.com/Srinath10X" target="_blank"><GithubSVG class={"mr-4"} height={"24px"} width={"24px"}/></a>
+		<a href=""><LinkedinSVG height={"24px"} width={"24px"}/></a>
 	</div>
-	<div>
-		<p class="font-medium dark:text-white">Designed and developed by Srinath</p>
-		<p class="text-right dark:text-white">&copy;{year} All Rights Reserved.</p>
+	<div class="dark:text-[#e8e6e3]">
+		<p class="font-medium">Designed and developed by Srinath</p>
+		<p class="text-right">&copy;{year} All Rights Reserved.</p>
 	</div>
 </footer>

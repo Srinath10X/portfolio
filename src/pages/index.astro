@@ -1,16 +1,22 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import LeftBlueGradient from '../components/gradients/LeftGradient.astro'
+import HorizontalRule from '../components/ui/HorizontalRule.astro'
+import Footer from '../components/Footer.astro';
 ---
 
-<Layout>
-	<Header/>
-	<LeftBlueGradient/>
-	<main class="lg:px-[22.5%] md:px-[10%] sm:px-[5%] px-6">
-		<div>
-			<h1 class="dark:text-white text-4xl font-semibold">Hi, I'm Srinath.</h1>
-			<p class="dark:text-white my-5">I'm a passionate web developer and a full-time Linux enthusiast. I love customizing (ricing) my desktop environment, optimizing workflows in the terminal, and diving deep into the world of minimal and efficient design.</p>
-		</div>
-	</main>
+<Layout Title="Hello">
+	<div>
+		<h1 class="dark:text-[#e8e6e3] text-3xl font-semibold">Hi, I'm Srinath.</h1>
+		<p class="dark:text-[#e8e6e3] my-6">I'm a passionate <b>web developer</b> and a full-time Linux enthusiast. I love customizing (ricing) my desktop environment, optimizing workflows in the terminal, and diving deep into the world of minimal and efficient design.</p>
+	</div>
+	<div>
+		<b class="dark:text-[#e8e6e3]">My Projects</b>
+		<HorizontalRule/>
+	</div>
+	<div>
+		<b class="dark:text-[#e8e6e3]">Recent Posts</b>
+		<HorizontalRule/>
+		<div></div>
+	</div>
+	<Footer/>
 </Layout>

@@ -1,3 +1,10 @@
+---
+import LeftGradient from "../components/gradients/LeftGradient.astro"
+import Header from '../components/Header.astro';
+
+const { Title } = Astro.props;
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -5,9 +12,11 @@
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>{Title}</title>
 	</head>
-	<body>
+	<body class="dark:bg-[#181a1b] dark:text-[#e8e6e3] lg:px-[22.5%] md:px-[12.5%] sm:px-[5%] px-10">
+		<Header/>
+		<LeftGradient/>
 		<slot />
 	</body>
 </html>
