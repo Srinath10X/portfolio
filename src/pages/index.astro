@@ -1,22 +1,29 @@
 ---
+import { getCollection } from 'astro:content';
+const posts = (await getCollection('blog')).sort((a, z) => +new Date(z.data.pubDate) - +new Date(a.data.pubDate));
+
 import Layout from '../layouts/Layout.astro';
 import Footer from '../components/Footer.astro';
-import HorizontalRule from '../components/ui/HorizontalRule.astro'
 ---
 
 <Layout Title="Hello">
 	<div>
-		<h1 class="dark:text-[#e8e6e3] text-3xl font-semibold">Hi, I'm Srinath.</h1>
-		<p class="dark:text-[#e8e6e3] my-6">I'm a passionate <b>web developer</b> and a full-time Linux enthusiast. I love customizing (ricing) my desktop environment, optimizing workflows in the terminal, and diving deep into the world of minimal and efficient design.</p>
-	</div>
-	<div>
-		<b class="dark:text-[#e8e6e3]">My Projects</b>
-		<HorizontalRule/>
+		<h1 class="dark:text-[#e8e6e3] text-3xl font-semibold">Hi, I'm Srinath 👋.</h1>
+		<p class="dark:text-[#e8e6e3] my-6 text-lg">I'm a passionate <b>web developer</b> and a full-time Linux enthusiast. I love customizing (ricing) my desktop environment, optimizing workflows in the terminal, and diving deep into the world of minimal and efficient design.</p>
 	</div>
 	<div>
 		<b class="dark:text-[#e8e6e3]">Recent Posts</b>
-		<HorizontalRule/>
-		<div></div>
+		<ul>
+			{posts.slice(0, 3).map((post) => (
+				<li class="w-full my-5">
+					<a href={`/blog/${post.id}`}>
+						<p class="py-2">{post.data.pubDate}</p>
+						<h3 class="font-bold text-2xl">{post.data.title}</h3>
+						<p class="py-2">{post.data.description}</p>
+					</a>
+				</li>
+			))}
+		</ul>
 	</div>
 	<Footer/>
 </Layout>

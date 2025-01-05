@@ -1,5 +1,4 @@
 ---
-import LeftGradient from "../components/gradients/LeftGradient.astro"
 import Header from '../components/Header.astro';
 
 const { Title } = Astro.props;
@@ -11,12 +10,13 @@ const { Title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="preload" href="/fonts/atkinson-regular.woff" as="font" type="font/woff" crossorigin />
+		<link rel="preload" href="/fonts/atkinson-bold.woff" as="font" type="font/woff" crossorigin />
 		<meta name="generator" content={Astro.generator} />
 		<title>{Title}</title>
 	</head>
-	<body class="dark:bg-[#181a1b] dark:text-[#e8e6e3] lg:px-[22.5%] md:px-[12.5%] sm:px-[5%] px-8">
+	<body class="dark:bg-[#091121] dark:text-[#e8e6e3] lg:px-[25%] md:px-[15%] sm:px-[10%] px-8">
 		<Header/>
-		<LeftGradient/>
 		<slot />
 	</body>
 </html>

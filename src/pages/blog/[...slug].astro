@@ -19,4 +19,10 @@ const post = Astro.props as CollectionEntry<'blog'>;
 const { Content } = await render(post)
 ---
 
-<Layout><Content></Layout>
+<Layout>
+	<div class="py-5">
+		<h1 class="font-bold text-4xl">{post.data.title}</h1>
+		<p class="pt-3">{post.data.pubDate}</p>
+	</div>
+	<Content>
+</Layout>

@@ -2,13 +2,20 @@
 import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 
-const blogPosts = await getCollection('blog')
+const blogPosts = (await getCollection('blog')).sort((a,z) => +new Date(z.data.pubDate) - +new Date(a.data.pubDate));
 ---
 
 <Layout>
-	<ul>
+	<h2 class="font-bold text-3xl">Blog</h2>
+	<ul class="my-8">
 		{blogPosts.map((post:any) => (
-			<li><a href={`/blog/${post.id}`}>{post.data.title}</a></li>
+		<li class="w-full my-5">
+			<a href={`/blog/${post.id}`}>
+				<p class="py-2">{post.data.pubDate}</p>
+				<h3 class="font-bold text-2xl">{post.data.title}</h3>
+				<p class="py-2">{post.data.description}</p>
+			</a>
+		</li>
 		))}
 	</ul>
 </Layout>

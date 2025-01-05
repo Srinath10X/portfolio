@@ -1,5 +1,4 @@
 ---
-import LeftGradient from "../components/gradients/LeftGradient.astro";
 const { Title } = Astro.props;
 ---
 <!doctype html>
@@ -11,8 +10,7 @@ const { Title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{Title}</title>
 	</head>
-	<body class="dark:bg-[#181a1b] dark:text-[#e8e6e3] lg:px-[22.5%] md:px-[12.5%] sm:px-[5%] px-8 py-[5%]">
-		<LeftGradient/>
+	<body class="dark:bg-[#091121] dark:text-[#e8e6e3] lg:px-[22.5%] md:px-[12.5%] sm:px-[5%] px-8 py-[5%]">
 		<slot />
 	</body>
 </html>

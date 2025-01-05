@@ -6,7 +6,8 @@
     "dev": "astro dev --host",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "disabletoolbar": "astro preferences disable devToolbar"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.0.3",
