@@ -1,5 +1,5 @@
 ---
-const { Title } = Astro.props;
+const { title } = Astro.props;
 ---
 <!doctype html>
 <html lang="en">
@@ -8,7 +8,7 @@ const { Title } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{Title}</title>
+		<title>{title}</title>
 	</head>
 	<body class="dark:bg-[#091121] dark:text-[#e8e6e3] lg:px-[22.5%] md:px-[12.5%] sm:px-[5%] px-8 py-[5%]">
 		<slot />

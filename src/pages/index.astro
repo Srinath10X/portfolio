@@ -2,11 +2,11 @@
 import { getCollection } from 'astro:content';
 const posts = (await getCollection('blog')).sort((a, z) => +new Date(z.data.pubDate) - +new Date(a.data.pubDate));
 
-import Layout from '../layouts/Layout.astro';
-import Footer from '../components/Footer.astro';
+import Layout from '@/layouts/Layout.astro';
+import Footer from '@/components/Footer.astro';
 ---
 
-<Layout Title="Hello">
+<Layout title="Hello">
 	<div>
 		<h1 class="dark:text-[#e8e6e3] text-3xl font-semibold">Hi, I'm Srinath 👋.</h1>
 		<p class="dark:text-[#e8e6e3] my-6 text-lg">I'm a passionate <b>web developer</b> and a full-time Linux enthusiast. I love customizing (ricing) my desktop environment, optimizing workflows in the terminal, and diving deep into the world of minimal and efficient design.</p>
@@ -15,7 +15,7 @@ import Footer from '../components/Footer.astro';
 		<b class="dark:text-[#e8e6e3]">Recent Posts</b>
 		<ul>
 			{posts.slice(0, 3).map((post) => (
-				<li class="w-full my-5">
+				<li class="w-full py-2 px-5 my-5 border-[#13233a] border rounded-md duration-300">
 					<a href={`/blog/${post.id}`}>
 						<p class="py-2">{post.data.pubDate}</p>
 						<h3 class="font-bold text-2xl">{post.data.title}</h3>
