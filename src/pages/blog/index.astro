@@ -6,8 +6,7 @@ const blogPosts = (await getCollection('blog')).sort((a,z) => +new Date(z.data.p
 ---
 
 <Layout>
-	<h2 class="font-bold text-3xl">Blog</h2>
-	<ul class="my-8">
+	<ul class="my-2">
 		{blogPosts.map((post) => (
 		<li class="w-full py-2 px-5 my-5 border-[#13233a] border rounded-md duration-300">
 			<a href={`/blog/${post.id}`}>

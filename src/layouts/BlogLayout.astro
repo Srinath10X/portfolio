@@ -10,17 +10,17 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="dark:bg-[#091121] dark:text-[#e8e6e3] lg:px-[22.5%] md:px-[12.5%] sm:px-[5%] px-8 py-[5%]">
+	<body class="dark:bg-[#020817] dark:text-[#f8fafc] lg:px-[22.5%] md:px-[12.5%] sm:px-[5%] px-8 py-[5%]">
 		<slot />
 	</body>
 </html>
 
 <style>
-:global(pre.astro-code) {
-	padding: 1rem;
-  margin: 1.5rem 0;
-	border-radius: .5rem;
-	background-color: #122537 !important;
-
-}
+	:global(pre.astro-code) {
+		padding: 1rem;
+		margin-top: 1.5rem;
+		margin-bottom: 1.5rem;
+		border-radius: 0.5rem;
+		background-color: #000d27 !important;
+	}
 </style>

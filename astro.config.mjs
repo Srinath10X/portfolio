@@ -10,7 +10,7 @@ export default defineConfig({
     tailwind(),
     mdx({
       shikiConfig: {
-        theme: "houston",
+        theme: "github-dark-high-contrast",
       },
     }),
   ],
