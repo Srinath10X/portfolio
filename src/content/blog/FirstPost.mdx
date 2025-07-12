@@ -3,14 +3,34 @@ title: "Hello world!"
 description: "Well this is my first blog post in this website"
 pubDate: 'Jan 06 2025'
 ---
+import Footer from "../../components/Footer.astro"
 
-The content will be uploaded soon cause I am writting this in night 2:00am I have to sleep 😴
+Testing Mdx
+
+checkboxes
+
+- [x] Todos
+- [x] Todos
+- [-] Todos
+- [ ] Todos
+
+codeblock
 
 ```cpp
-#include <iostream>
+#include <axeu/axeu.h>
 
 int main() {
-	std::string a = "some random long string which is pretty much long enough to be scrolled"
+	axeu::app App;
+	
+	App.get("/", []() {
+		return "Hello world!";
+	});
+
 	return 0;
 }
 ```
+
+component like this
+<Footer />
+
+this is my page footer btw and I can render it in mdx
