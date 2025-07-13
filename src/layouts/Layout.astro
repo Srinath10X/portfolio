@@ -1,16 +1,22 @@
 ---
 import Header from '../components/Header.astro';
 
-const { title } = Astro.props;
+const {
+	url = "https://srinath.website",
+	title = "Srinath10X – Web Dev & Linux Ricer",
+	description = "I'm a passionate web developer and a full-time Linux enthusiast. I love customizing my desktop environment, optimizing workflows in the terminal, and diving deep into minimal, efficient design.",
+} = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<meta charset="UTF-8" />
+		<meta name="robots" content="index, follow" />
+		<meta name="description" content={description}>
+		<meta name="generator" content={Astro.generator} />
+		<meta name="viewport" content="width=device-width" />
 	</head>
 	<body class="dark:bg-[#020817] dark:text-[#f8fafc] lg:px-[25%] md:px-[15%] sm:px-[10%] px-8 relative">
 		<div class="absolute top-0 right-0 z-[-2] h-screen w-screen bg-[radial-gradient(100%_50%_at_50%_0%,rgba(0,163,255,0.25)_0,rgba(0,163,255,0)_50%,rgba(0,163,255,0)_100%)]"></div><Header/>
