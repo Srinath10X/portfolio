@@ -2,12 +2,21 @@
 import LinkedinSVG from '@/assets/linkedin.svg'
 import GithubSVG from '@/assets/github.svg'
 
+const socials = {
+  github: "https://github.com/Srinath10X",
+  linkedin: "https://www.linkedin.com/in/srinath10x/",
+}
+
 const year = new Date().getFullYear();
 ---
 <footer class="flex align-center justify-between py-5 mb-[2rem] max-sm:flex-wrap">
 	<div class="h-full w-1/4 py-4 flex flex-row max-sm:justify-center max-sm:w-full">
-		<a href="https://github.com/Srinath10X" target="_blank"><GithubSVG class={"mr-4"} height={"24px"} width={"24px"}/></a>
-		<a href=""><LinkedinSVG height={"24px"} width={"24px"}/></a>
+    <a href={socials.github} target="_blank">
+      <GithubSVG class="mr-4" height={"24px"} width={"24px"}/>
+    </a>
+    <a href={socials.linkedin}>
+      <LinkedinSVG height={"24px"} width={"24px"}/>
+    </a>
 	</div>
 	<div class="dark:text-[#e8e6e3] max-sm:w-full flex flex-col max-sm:items-center">
 		<p class="font-medium">Designed and developed by Srinath</p>
