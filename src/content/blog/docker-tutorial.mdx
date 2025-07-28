@@ -1,0 +1,65 @@
+---
+title: "Introduction to Docker"
+pubDate: "Jun 28 2025"
+description: "Understand what Docker is and the problem it solves"
+---
+
+![DockerImage](https://docs.docker.com/images/thumbnail.webp)
+
+## What is Docker?
+
+<u>**Docker**</u> is like a **box** that contains your app and everything it needs to run. no matter where you run it, it just works.
+
+<br/>
+
+Okay that might sound like a lot at first so before we jump into docker itself, let's first understand <u>**Why docker was
+created?**</u> in the first place. It all started with one frustating issue every developer has faced.
+
+> **“It works on my machine.”**
+
+You’ve built a cool app. It runs fine on your system. You share the code with a friend,
+**Boom. It breaks.** 
+Missing dependencies, wrong versions, weird OS bugs.
+
+<br />
+
+This is the problem docker was designed to solve.
+
+
+### ☁️ Real-World Example
+
+Let’s say you’ve built a backend app using **Python** and **Flask**.
+
+You’ve installed Python and Flask on your machine, and everything works perfectly.
+
+But now, you share your app with a friend… and they can’t run it. Why?
+<br />
+- They don’t have Python installed.
+- They’re using a different OS (maybe Linux, maybe BSD).
+- Maybe their Python version is outdated.
+
+So what now? Do they have to install Python, install Flask, set everything up exactly like you did?
+
+That’s painful.
+
+<br/>
+
+### 🐋 Docker Solution
+
+Instead of making your friend install all the dependencies manually, you can just send them a **Docker image** and that contains your app **plus everything it needs to run**. 
+
+They just run:
+```bash
+docker run your-app
+```
+And it works regardless of their OS, system setup or environment.
+
+### 📦 How Docker Works?
+
+![DockerArchitecture](https://www.docker.com/wp-content/uploads/2021/11/docker-containerized-appliction-blue-border_2.png)
+
+Docker runs on top of your host machine and uses **Linux containers** to run your apps.
+It uses host machine(aka your operating system) **kernel** and a **layered file system** to store your apps and their
+dependencies containerized.
+
+In the next post, we'll build our first Docker container from scratch. See you then! 👋
