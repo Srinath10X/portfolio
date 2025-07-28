@@ -1,6 +1,6 @@
 ---
 import { type CollectionEntry, getCollection } from 'astro:content'
-import Layout from '@/layouts/BlogLayout.astro'
+import BlogLayout from '@/layouts/BlogLayout.astro'
 
 // If you get some error while importing this like 'Module '"astro:content"' has no exported member'
 // run 'npx astro sync' and then restart your lsp or reopen your editor of your choice which will fix the issue
@@ -19,11 +19,11 @@ const post = Astro.props as CollectionEntry<'blog'>;
 const { Content } = await render(post)
 ---
 
-<Layout>
-	<div class="py-5">
+<BlogLayout>
+	<div class="py-2">
 		<button class="mb-[1rem]" onclick="history.back()">← back</button>
 		<h1 class="font-bold text-4xl">{post.data.title}</h1>
-		<p class="pt-3">{post.data.pubDate}</p>
+    <p class="pt-4">&nbsp; {post.data.pubDate}</p>
 	</div>
 	<Content>
-</Layout>
+</BlogLayout>
