@@ -11,7 +11,7 @@ const blogPosts = (await getCollection('blog')).sort((a,z) => +new Date(z.data.p
 		<li class="w-full py-2 px-5 my-5 border-[#13233a] border rounded-md duration-300">
 			<a href={`/blog/${post.id}`}>
 				<p class="py-2">{post.data.pubDate}</p>
-				<h3 class="font-bold text-2xl">{post.data.title}</h3>
+				<p class="font-bold text-2xl">{post.data.title}</p>
 				<p class="py-2">{post.data.description}</p>
 			</a>
 		</li>
