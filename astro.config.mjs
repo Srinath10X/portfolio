@@ -6,6 +6,9 @@ import { defineConfig } from "astro/config";
 
 export default defineConfig({
   site: "https://srinath.website",
+  build: {
+    inlineStylesheets: "always",
+  },
   vite: {
     resolve: {
       alias: { "@": "/src" },
